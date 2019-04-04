@@ -24,7 +24,7 @@ def chck():
         (button1["text"]=="X" and button4["text"]=="X" and button7["text"]=="X") or
         (button2["text"]=="X" and button5["text"]=="X" and button8["text"]=="X") or
         (button3["text"]=="X" and button6["text"]=="X" and button9["text"]=="X")):
-        tt.messagebox.showinfo("Winner is X")
+        tt.messagebox.showinfo("Result","Winner is X")
     elif((button1["text"]=="O" and button2["text"]=="O" and button3["text"]=="O") or
         (button4["text"]=="O" and button5["text"]=="O" and button6["text"]=="O") or
         (button7["text"]=="O" and button8["text"]=="O" and button9["text"]=="O") or
@@ -33,7 +33,7 @@ def chck():
         (button1["text"]=="O" and button4["text"]=="O" and button7["text"]=="O") or
         (button2["text"]=="O" and button5["text"]=="O" and button8["text"]=="O") or
         (button3["text"]=="O" and button6["text"]=="O" and button9["text"]=="O")):
-        tt.messagebox.showinfo("Winner is O")
+        tt.messagebox.showinfo("Result","Winner is O")
 def reset():
    button1["text"]="     "
    button2["text"]="     "
@@ -62,9 +62,9 @@ button8=tt.Button(tic,text="     ",command=lambda:methods(button8),width=8,heigh
 button8.grid(column=1,row=2)
 button9=tt.Button(tic,text="     ",command=lambda:methods(button9),width=8,height=4)
 button9.grid(column=2,row=2)
-button10=tt.Button(tic,text= "   reset   ",command=lambda:reset(),width=8,height=4)
+button10=tt.Button(tic,text= "   Reset   ",command=lambda:reset(),width=8,height=4)
 button10.grid(row=4,column=0,columnspan=3,sticky=tt.E+tt.W)
-button11=tt.Button(tic,text= "   exit   ",command=lambda:tic.destroy(),width=8,height=4)
+button11=tt.Button(tic,text= "   Exit   ",command=lambda:tic.destroy(),width=8,height=4)
 button11.grid(row=5,column=0,columnspan=3,sticky=tt.E+tt.W)
 tic.resizable(0,0)
 tic.mainloop()
